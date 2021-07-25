@@ -13,6 +13,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
+	
+	<packaging>jar</packaging>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -81,6 +83,17 @@
 					</excludes>
 				</configuration>
 			</plugin>
+	  		<plugin>
+	  			<groupId>org.apache.maven.plugins</groupId>
+	  			<artifactId>maven-compiler-plugin</artifactId>
+	  			<version>3.8.1</version>
+	  			<configuration> 
+	              <!-- 플레이스홀더 -->
+	  				<source>${java-version}</source>
+	                <target>${java-version}</target>
+	              <!-- -->
+	  			</configuration>
+	  		</plugin>			
 		</plugins>
 	</build>
 
